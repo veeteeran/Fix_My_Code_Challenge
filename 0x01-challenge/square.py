@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class square():
+class rectangle():
     
     width = 0
     height = 0
@@ -10,11 +10,11 @@ class square():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def area_of_my_square(self):
+    def area_of_my_rectangle(self):
         """ Area of the square """
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def PermiterOfMyRectangle(self):
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
@@ -22,7 +22,7 @@ class square():
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = rectangle(width=12, height=9)
     print(s)
-    print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.area_of_my_rectangle())
+    print(s.PermiterOfMyRectangle())
