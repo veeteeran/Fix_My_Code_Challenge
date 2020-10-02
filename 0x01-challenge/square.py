@@ -13,7 +13,6 @@ class rectangle():
         self.width = width
         self.height = height
 
-    '''
     @property
     def width(self):
         """ getter method for width """
@@ -55,7 +54,6 @@ class rectangle():
             raise ValueError("height must be > 0")
 
         self.__height = value
-    '''
 
     def area_of_my_rectangle(self):
         """ Area of the square """
