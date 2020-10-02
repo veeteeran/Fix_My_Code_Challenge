@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+from sys import argv
+
 
 class rectangle():
     
@@ -6,11 +8,12 @@ class rectangle():
     height = 0
 
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width, height):
         """Init for square """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        self.width = width
+        self.height = height
 
+    '''
     @property
     def width(self):
         """ getter method for width """
@@ -52,6 +55,7 @@ class rectangle():
             raise ValueError("height must be > 0")
 
         self.__height = value
+    '''
 
     def area_of_my_rectangle(self):
         """ Area of the square """
