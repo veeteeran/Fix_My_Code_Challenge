@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
 class square():
-    
+    '''
     width = 0
     height = 0
-
+    '''
     
-    def __init__(self, width, height):
+    def __init__(self, width, height, **kwargs):
         """Init for square """
-        self.width = width
-        self.height = height
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            self.width = width
+            self.height = height
 
     @property
     def width(self):
@@ -45,6 +49,7 @@ class square():
             Parameter:
                 value: height of square
         """
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
 
@@ -55,17 +60,17 @@ class square():
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def PermiterOfMySquare(self):
-        return (self.width * 2) + (self.height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.__width, self.__height)
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = square(12, 9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
