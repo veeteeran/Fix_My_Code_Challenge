@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-from sys import argv
 
-
-class rectangle():
+class square():
     
     width = 0
     height = 0
@@ -55,11 +53,11 @@ class rectangle():
 
         self.__height = value
 
-    def area_of_my_rectangle(self):
+    def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.height
 
-    def PermiterOfMyRectangle(self):
+    def PermiterOfMySquare(self):
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
@@ -67,7 +65,7 @@ class rectangle():
 
 if __name__ == "__main__":
 
-    s = rectangle(width=12, height=9)
+    s = square(width=12, height=9)
     print(s)
-    print(s.area_of_my_rectangle())
-    print(s.PermiterOfMyRectangle())
+    print(s.area_of_my_square())
+    print(s.PermiterOfMySquare())
